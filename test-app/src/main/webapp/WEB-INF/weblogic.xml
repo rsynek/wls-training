@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app">
+  <security-role-assignment>
+<!-- please provide mapping between the application role and existing user group(s) -->
+  </security-role-assignment>
+</weblogic-web-app>

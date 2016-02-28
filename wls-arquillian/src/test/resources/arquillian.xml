@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jboss.org/schema/arquillian"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+  <defaultProtocol type="Servlet 2.5" />
+
+  <engine>
+    <property name="deploymentExportPath">target/arquillian</property>
+  </engine>
+
+  <group qualifier="containers" default="true">
+    <container qualifier="managed-container" default="true">
+      <configuration>
+        <property name="adminUrl">t3://localhost:7001</property>
+        <property name="adminUserName">${wls.username}</property>
+        <property name="adminPassword">${wls.password}</property>
+        <property name="wlHome">${wls.home}</property>
+        <property name="target">AdminServer</property>
+   <!--     <property name="deployExplodedArchive">true</property> -->
+      </configuration>
+    </container>
+  </group>
+</arquillian>
